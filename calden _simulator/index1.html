@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b408879b64.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu_despleg.css">
+    <link rel="stylesheet" href="css/qrs.css">
+    <link rel="stylesheet" href="css/transferModal.css">
+    <title>Calden Oil</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_calden">
+            <div class="header_calden__logo">
+                <img class="logo" src="images/logo1_calden.jpg" width="140px" height="80px">
+                <h1>Cálden Oil - MAR DEL PLATA</h1>
+            </div>
+            <div class="icons">
+                <i class="fa fa-window-minimize" aria-hidden="true"></i>
+                <i class="fa fa-window-maximize" aria-hidden="true"></i>
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+            </div>
+        </div>
+        
+    </header>
+    <section class="facturacion" id="facturacion">
+        <p class="parrafo"><b>Facturador</b> Emisor de facturas, tickets y remitos</p>
+        <div class="cuerpos">
+            <div class="cuerpo1">
+                <form class="form1">
+                    <div class="titulo">
+                        <h1>TICKET</h1>
+                        <div class="emision">
+                            <label>Fecha de emisión</label>
+                            <p class="fecha_actual"></p>
+                        </div>
+                    </div>
+                    <div class="formulario">
+                        <div>
+                            <p>Cliente</p>
+                            <div class="contenedor" id="cliente">Consumidor Final</div>
+                        </div>
+                        <div>
+                            <p>Categoría IVA</p>
+                            <div class="contenedor_1" id="categ">CONSUMIDOR FINAL</div>
+                        </div>
+                        <div>
+                            <p>Domicilio</p>
+                            <div class="contenedor" id="direc"></div>
+                        </div>
+                        <div>
+                            <p>Documento</p>
+                            <div class="contenedor_2" id="docu"></div>
+                        </div>
+                        <div>
+                            <p>Localidad</p>
+                            <div class="contenedor" id="local"></div>
+                        </div>
+                        <div>
+                            <p>Condición de venta</p>
+                            <div class="contenedor_3">CONTADO</div>
+                        </div>
+                    </div>
+                </form>
+                <p class="items">Items del Comprobante</p>
+                <div class="scroll">
+                    <label for="search">Buscar articulo: </label>
+                    <input id="search">
+                    <label for="search1"></label>
+                    <input id="search1">
+                    <table class="table table-sm table-striped table-hover mt-4" id="table">
+                        <thead class="table-secondary">
+                            <tr>
+                                <th>Cantidad</th>
+                                <th>Articulo</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tableBody">
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <template id="tRow">
+                    <tr>
+                        <td class="tabSurt"></td>
+                        <td class="tabLitr"></td>
+                        <td class="tabProd"></td>
+                        <td class="tabVal"></td>
+                        <td class="tabTot"></td>
+                    </tr>
+                </template>
+
+                <p>Totales</p>
+                <hr>
+                <form class="form2">
+                    <div class="divf2_1">
+                        <div>
+                            <p>Neto no gravado</p>
+                            <div class="div_f2"></div>
+                        </div>
+                        <div>
+                            <p>Tasas</p>
+                            <div class="div_f2" id="tasas"></div>
+                        </div>
+                        <div>
+                            <p>Neto gravado</p>
+                            <div class="div_f2" id="gravado"></div>
+                        </div>
+                        <div>
+                            <p>Percepciones IVA</p>
+                            <div class="div_f2"></div>
+                        </div>
+                        <div>
+                            <p>IVA</p>
+                            <div class="div_f2" id="iva"></div>
+                        </div>
+                        <div>
+                            <p>Percepciones IIBB</p>
+                            <div class="div_f2"></div>
+                        </div>
+                        <div>
+                            <p>Impuesto interno</p>
+                            <div class="div_f2" id="imp_int"></div>
+                        </div>
+                        <div>
+                            <p>Otras percepciones</p>
+                            <div class="div_f2"></div>
+                        </div>
+                    </div>
+                    <div class="divf2_2">
+                        <h3>Total</h3>
+                        <div class="total"></div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="cuerpo2">
+                <div class="btns">
+                    <button button type="button" id="abrirModal" data-bs-toggle="modal"
+                        data-bs-target="#exampleModalCenter"><img src="images/icon_people.jpeg">F4</button>
+                    <button><img src="images/icon_correr.webp"></button>
+                    <button type="submit" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModalCenteredScrollable"><img
+                            src="images/icon_surtidor.jpeg">F7</button>
+                    <button><img src="images/icon_ticket.jpeg"></button>
+                    <button class="impresion"><img src="images/icon_impresora.jpeg">F8</button>
+                    <button class="cierre_turno"><img src="images/icon_autorizado.png">F6</button>
+                    <button class="choferes"><img src="images/icon_camion.png" width="40px" height="40px">F9</button>
+                    <button type="submit" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModalCenteredScrollable1"><img
+                            src="images/icon_monitores.jpeg">F3</button>
+                    <button class="fac_manual"><img src="images/icon_calculo.jpeg">F10</button>
+                    <button class="limpia"><img src="images/icon_hoja.jpeg">F11</button>
+                    <button class="opcPagos"><img src="images/icon_credit.jpeg">F12</button>
+                    <button type="submit" id="btn" data-bs-toggle="modal" data-bs-target="#myModal1"><img
+                            src="images/icon_verifone.jpeg">F2</button>
+                </div>
+                <div class="btn">
+                    <button class="salir"><img src="images/icon_flecha.jpeg" width="90px" height="50px"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--INICIO MODAL-->
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalCenterTitle">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Facturador</font>
+                        </font>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerca"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" enctype="multipart/form-data" id="formularium">
+                        <p>Cliente: Seleccione cliente</p>
+
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Razón social</label>
+                            <input class="form-control" type="text" name="description" id="description" maxlength="60"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Dirección</label>
+                            <input class="form-control" type="text" name="direccion" id="direccion" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="localidad" class="form-label">Localidad</label>
+                            <input class="form-control" type="text" name="localidad" id="localidad" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="documento" class="form-label">Documento/cuit</label>
+                            <input class="form-control" type="num" name="documento" id="documento" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Categoría:</label>
+                            <select class="form-select" name="category" id="category" required>
+                                <option value="">Seleccionar...</option>
+                                <option>Consumidor final</option>
+                                <option>Responsable inscripto</option>
+                                <option>Excento</option>
+                                <option>Monotributista</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-success" id="agregar">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Aceptar</font>
+                                </font>
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Cerrar</font>
+                                </font>
+                            </button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Cancelar</font>
+                                </font>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1"
+        aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Facturador</font>
+                        </font>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerca"></button>
+                </div>
+                <div class="modal-body">
+                    <p><b>Despachos:</b> Seleccione el despacho a facturar</p>
+                    <p><b>F4 Capturar - F9 Reservar - F5 Limpiar</b></p>
+                    <table class="table table-sm table-striped table-hover mt-4" id="table1">
+                        <thead class="table-secondary">
+                            <tr>
+                                <th>Surtidor</th>
+                                <th>Litros</th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Importe</th>
+                                <th>Seleccionar</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="s1">1</td>
+                                <td class="l1">20.00</td>
+                                <td class="p1">SUPER</td>
+                                <td class="v1">1100</td>
+                                <td class="t1">22000</td>
+                                <td>
+                                    <button type="submit" class="btn btn-primary" onclick="agregarFila1()">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;"><i class="fa fa-check"
+                                                    aria-hidden="true"></i></font>
+                                        </font>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="s2">2</td>
+                                <td class="l2">20.00</td>
+                                <td class="p2">PREMIUM</td>
+                                <td class="v2">1300</td>
+                                <td class="t2">26000</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" onclick="agregarFila2()">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;"><i class="fa fa-check"
+                                                    aria-hidden="true"></i></font>
+                                        </font>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="s3">3</td>
+                                <td class="l3">20.00</td>
+                                <td class="p3">DIESEL</td>
+                                <td class="v3">1200</td>
+                                <td class="t3">24000</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" onclick="agregarFila3()">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;"><i class="fa fa-check"
+                                                    aria-hidden="true"></i></font>
+                                        </font>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="s4">4</td>
+                                <td class="l4">20.00</td>
+                                <td class="p4">EURO</td>
+                                <td class="v4">1400</td>
+                                <td class="t4">28000</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" onclick="agregarFila4()">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;"><i class="fa fa-check"
+                                                    aria-hidden="true"></i></font>
+                                        </font>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-success" onclick="agregarFila()">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Aceptar</font>
+                            </font>
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Cerrar</font>
+                            </font>
+                        </button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Cancelar</font>
+                            </font>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalCenteredScrollable1" tabindex="-1"
+        aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">TRANFERENCIAS DE VALORES DURANTE EL TURNO</font>
+                        </font>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerca"></button>
+                </div>
+                <div class="modal-body">
+                    <form  method="post" enctype="multipart/form-data" id="formularium1">
+
+                        <div class="mb-h">
+                            <label for="caja" class="form-label">Caja:</label>
+                            <select class="form-select" name="caja" id="caja" required>
+                                <option value="">Seleccionar...</option>
+                                <option>PLAYA</option>
+                                <option>SHOP</option>
+                            </select>
+                        </div>
+    
+                        <div class="cuerposModal">
+                            <div class="cuerpoModal1">
+    
+                                <div class="cm1">
+                                    <p>Orígen - Destino</p>
+                                    <input type="radio" name="grupo" class="od" id="entregaTes" required>
+                                    <label for="entregaTes" class="l_od" id="l_et">Entregado a tesorería</label><br>
+                                    <input type="radio" name="grupo" class="od" id="recibeTes" required>
+                                    <label for="recibeTes" class="l_od" id="l_rt">Recibido de tesorería</label><br> 
+                                    <input type="radio" name="grupo" class="od" id="entregaEmp" required>
+                                    <label for="entregaEmp" class="l_od" id="l_er">Entregado a empresa recaudadora</label><br> 
+                                </div>
+    
+                                <div class="cm1">
+                                    <p>Detalle de valores transferidos</p>
+                                    <label for="valor">Efectivo</label>
+                                    <input type="number" id="valor" class="valor" placeholder="0.00" required>
+                                </div>
+                            </div>
+                            <div class="cuerpoModal2">
+                                <p class="t-s">Transferencias ya efectuadas</p>
+                                <table class="table table-xl table-striped table-hover mt-4" id="tabModal">
+                                    <tbody id="tbodyModal">
+                                        
+                                    </tbody>
+                                </table>
+        
+                                <template id="tRowModal">
+                                    <tr>
+                                        <td class="date"></td>
+                                        <td>Efectivo</td>
+                                        <td class="tabOrDes"></td>
+                                        <td class="tabImp"></td>
+                                    </tr>
+                                </template>
+                                <div class="t-i">
+                                    <p>total transferido:</p>
+                                    <div class="totTransf"></div>
+                                </div>
+                            </div>                           
+                        </div>
+    
+                        <div class="mb-btns">
+    
+                            <button type="button" class="btn btn-success" id="btn_agregar" onclick="agregarFilaBuzon()">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Aceptar</font>
+                                </font>
+                            </button>
+    
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Cerrar</font>
+                                </font>
+                            </button>
+    
+                        </div>
+    
+                    </form>
+                    
+                </div>
+                <div class="modal-footer">
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Facturador</font>
+                        </font>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerca"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <p><b>Despachos:</b> Seleccione el despacho a facturar</p>
+                        <p><b>F4 Capturar - F9 Reservar - F5 Limpiar</b></p>
+                        <table class="table table-sm table-striped table-hover mt-4" id="table1">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th>Código</th>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>Importe</th>
+                                    <th>Seleccionar</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="c1">1</td>
+                                    <td class="a1">001</td>
+                                    <td class="d1">Agua destilada x 5l</td>
+                                    <td class="pr1">3300</td>
+                                    <td class="pt1">3300</td>
+                                    <td>
+                                        <button type="submit" class="btn btn-primary" onclick="agregarFila1P()">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;"><i class="fa fa-check"
+                                                        aria-hidden="true"></i></font>
+                                            </font>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="c2">1</td>
+                                    <td class="a2">002</td>
+                                    <td class="d2">Aceite castrol 15w40 x 1l</td>
+                                    <td class="pr2">13000</td>
+                                    <td class="pt2">13000</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" onclick="agregarFila2P()">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;"><i class="fa fa-check"
+                                                        aria-hidden="true"></i></font>
+                                            </font>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="c3">1</td>
+                                    <td class="a3">003</td>
+                                    <td class="d3">Liq. frenos bardhal x 500ml</td>
+                                    <td class="pr3">9400</td>
+                                    <td class="pt3">9400</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" onclick="agregarFila3P()">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;"><i class="fa fa-check"
+                                                        aria-hidden="true"></i></font>
+                                            </font>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="c4">1</td>
+                                    <td class="a4">004</td>
+                                    <td class="d4">Refrigerante tir x 1l</td>
+                                    <td class="pr4">19800</td>
+                                    <td class="pt4">19800</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" onclick="agregarFila4P()">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;"><i class="fa fa-check"
+                                                        aria-hidden="true"></i></font>
+                                            </font>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-success" onclick="agregarFila()">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Aceptar</font>
+                                </font>
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Cerrar</font>
+                                </font>
+                            </button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Cancelar</font>
+                                </font>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Facturador</font>
+                        </font>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerca"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="qr_body">
+                        <div class="qr_cont">
+                            <h2>Posición 1</h2>
+                            <img id="qr1" src="images/img_qr.png" width="220px" height="220px">
+                        </div>
+                        <div class="qr_cont">
+                            <h2>Posición 2</h2>
+                            <img id="qr2" src="images/img_qr.png" width="220px" height="220px">
+                        </div>
+                        <div class="qr_cont">
+                            <h2>Posición 3</h2>
+                            <img id="qr3" src="images/img_qr.png" width="220px" height="220px">
+                        </div>
+                        <div class="qr_cont">
+                            <h2>Posición 4</h2>
+                            <img id="qr4" src="images/img_qr.png" width="220px" height="220px">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="btn_qr">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Aceptar</font>
+                        </font>
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Cerrar</font>
+                        </font>
+                    </button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Cancelar</font>
+                        </font>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--FIN MODAL-->
+
+    <!--PIE DE PANTALLA-->
+
+    <section class="footer">
+        <ul>
+            <li>Usuario:SA</li>
+            <li>PC:DESKTOP</li>
+            <li>Puesto:PLAYA</li>
+            <li>
+                <div class="reloj">
+                    <p class="fecha"></p>
+                    <p class="tiempo"></p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/watch.js"></script>
+    <script src="js/cierre.js"></script>
+    <script src="js/impresion.js"></script>
+    <script src="js/dma.js"></script>
+    <script src="js/agregar_cliente.js"></script>
+    <script src="js/buscar_art.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+        </script>
+    <script src="js/modalF2.js"></script>
+    <script src="js/limpiar.js"></script>
+    <script src="js/salir.js"></script>
+    <script src="js/foco.js"></script>
+    <script src="js/pagos.js"></script>
+    <script src="js/agregar_buzon.js"></script>
+    <script src="js/facturas_manuales.js"></script>
+
+</body>
+
+</html>

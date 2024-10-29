@@ -1,0 +1,76 @@
+.desplegable a:hover{
+    color: #000000;
+    opacity: 0.9;
+    transition: 300ms;
+    text-decoration: underline;
+    text-align: left;
+}
+
+ul .desplegable:hover .ul_1{
+    display: grid;
+}
+
+.desplegable .ul_1{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:#e7e6e6; 
+    padding: 0;
+    text-align: left;
+}
+
+
+.desplegable .ul_1 li{
+    width: 150px;
+    margin: 0;
+    padding-left: 15px;
+    padding-top: 10px;
+    display: flex;
+    text-align: left;
+}
+
+.desplegable .ul_1 li a{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.cierres .ul_2 li {
+    width: 230px;
+    margin: 0;
+    padding: 0;
+}
+
+.listados .ul_3 li {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.ul_1 li .ul_2 {
+    display: none;
+    position: absolute;
+    background-color: #e7e6e6;
+    width: 230px;
+    margin-top: 10px;
+}
+
+.ul_1 li .ul_2 li{
+    padding-top: 5px;
+}
+
+.ul_1 li .ul_3 {
+    display: none;
+    position: absolute;
+    background-color: #e7e6e6;
+    width: 250px;
+    margin-top: 10px;
+}
+
+.ul_1 li:hover > ul {
+    display: block;
+    right: -230px;
+    top: 0;
+}

@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+p .t1{
+    background-color: #eeeeee;
+    margin-bottom: 0;
+}
+
+.t1{
+    font-size: 18px;
+    padding: 10px 0 10px 10px;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: bolder;
+    display: flex;
+    gap: 20px;
+}
+
+h2{
+    font-size:18px ;
+    padding-left: 40px;
+}
+
+.tabla{
+    background-color: #eeeeee;
+    height: 600px;
+}
+
+table{
+    width: 1000px;
+}
+
+table thead{
+    background-color: #18446d;
+    color: #ffffff;
+    text-align: center;
+}
+
+.concepto {
+    width: 90%;
+}
+
+tbody{
+    background-color:#0857ce;
+    color: #ffffff;
+    text-align: right;
+}
+
+td{
+    border: 1px solid #ffffff;
+    padding-right: 3px;
+}
+
+input{
+    text-align: right;
+}
+
+.btn_fin{
+    border-top: 5px solid #b9b9b9;
+    text-align: right;
+}
+
+.btn_final{
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #eeeeee;
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 250px;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+.btn_final:hover{
+    background-color: #cdfff4;
+    font-size: 16.5px;
+    transition: 300ms;
+}

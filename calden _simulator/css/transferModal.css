@@ -1,0 +1,63 @@
+.mb-h{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.form-select{
+    width: 30%;
+}
+.cuerposModal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cm1{
+    border: 3px solid #949292;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.cuerpoModal2{
+    border: 3px solid #949292;
+    border-radius: 5px;
+    width: 50%;
+    height: auto;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.mb-btns{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+#tabModal, #tbodyModal{
+    background-color: #ffffff;
+}
+
+.t-s, .t-i {
+    border: 3px solid #949292;
+    text-align: center;
+}
+
+.t-i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    height: 30px;
+}
+ .t-i p{
+    padding-top: 15px;
+ }

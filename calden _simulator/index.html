@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b408879b64.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu_despleg.css">
+    <link rel="stylesheet" href="css/qrs.css">
+    <title>Calden Oil</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_calden">
+            <div class="header_calden__logo">
+                <img class="logo" src="images/logo1_calden.jpg" width="140px" height="80px">
+                <h1>Cálden Oil - MAR DEL PLATA</h1>
+            </div>
+            <div class="icons">
+                <i class="fa fa-window-minimize" aria-hidden="true"></i>
+                <i class="fa fa-window-maximize" aria-hidden="true"></i>
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="menu" id="m">
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="#">Archivos</a></li>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Stock</a></li>
+                    <li class="desplegable"><a href="#">Turnos</a>
+                        <ul class="ul_1">
+                            <li class="cierres"><a href="">Cierres <i class="fa fa-caret-right"
+                                        aria-hidden="true"></i></a>
+                                <ul class="ul_2">
+                                    <li><a type="button" class="cierreTurno">Realizar cierre</a></li>
+                                    <li><a href="ingreso_datos.html">Ingreso de datos</a></li>
+                                    <li><a href="">******</a></li>
+                                    <li><a href="">******</a></li>
+                                </ul>
+                            </li>
+                            <li class="listados"><a href="">Listados <i class="fa fa-caret-right"
+                                        aria-hidden="true"></i></a>
+                                <ul class="ul_3">
+                                    <li><a href="">******</a></li>
+                                    <li><a href="">******</a></li>
+                                    <li><a href="stock.html">Existencia de stock</a></li>
+                                    <li><a href="">******</a></li>
+                                    <li><a href="">******</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Proveedores</a></li>
+                    <li><a href="#">Tesorería</a></li>
+                    <li><a href="#">Contabilidad</a></li>
+                    <li><a href="#">Gestión</a></li>
+                    <li><a href="#">Utilidades</a></li>
+                    <li><a href="#">Seguridad</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Asistencia</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="menu2" id="m_2">
+            <a class="acceso" id="acceso"><img src="images/icon_windows.png" width="40px" height="40px"></a>
+        </div>
+    </header>
+    <main>
+        <!--PANTALLA INICIO-->
+
+        <section class="inicio" id="inicio">
+            <img src="images/logo1_calden.jpg">
+        </section>
+
+        <!--PIE DE PANTALLA-->
+
+        <section class="footer">
+            <ul>
+                <li>Usuario:SA</li>
+                <li>PC:DESKTOP</li>
+                <li>Puesto:PLAYA</li>
+                <li>
+                    <div class="reloj">
+                        <p class="fecha"></p>
+                        <p class="tiempo"></p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/watch.js"></script>
+    <script src="js/acceso.js"></script>
+    <script src="js/cierre1.js"></script>
+    
+    <script src="js/dma.js"></script>
+   
+   
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+    </script>
+    
+</body>
+
+</html>

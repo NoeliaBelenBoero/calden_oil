@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b408879b64.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ingreso_datos.css">
+    <title>Ingreso de datos</title>
+</head>
+<body>
+    <header>
+        <p class="t1"><b>Ingreso de datos del cierre de turno</b></p>
+        <div class="container">
+            <div class="titulos">
+                <h1>Valores recibidos (PLAYA. <p class="fecha"></p> - <p class="hora"></p>)</h1>
+                <h2>Ingrese la composición de todos los valores recibidos en éste turno</h2>
+            </div>
+            <img src="images/icon_billetes.jpeg" width="150px" height="120px">
+        </div>
+    </header>
+    <div class="tabla">
+        <center>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="concepto">Concepto</th>
+                        <th class="importe">Importe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cambio del turno anterior</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Valores sin buzón</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Cambio para turno siguiente</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Cheques</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Tarjetas</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Pagos/Gastos</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Vales clientes/Empleados</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Otros ingresos</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Bonos emitidos</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Bonos/vales propios recuperados</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Factura por diferencia de combustible</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Factura por diferencia de envasados</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Transferencias(Egresos)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Transferencias(Ingresos)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Total declarado</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Total de ventas cobradas</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Diferencia teórica</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Diferencia real</td>
+                        <td></td>
+                    </tr>
+                               
+                </tbody>
+            </table>
+        </center>
+    </div>
+   
+
+    <div class="btn_fin">
+        <a type="button" href="index.html" class="btn_final">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Finalizar</font>
+            </font>
+        </a>
+    </div>
+    
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+</script>
+<script src="js/fech_hor.js"></script>
